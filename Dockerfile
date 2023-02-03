@@ -1,5 +1,4 @@
-FROM golang:bullseye AS build
-RUN apt-get update -y
+FROM golang:alpine AS build
 WORKDIR /opt/gotuna
 COPY . .
 RUN go build examples/fullapp/cmd/main.go
