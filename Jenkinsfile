@@ -1,10 +1,11 @@
 pipeline {
   agent any
   options { 
-    timestamps {
-      echo "\\033[32m[${env.BUILD_ID}] Timestamp: ${currentBuild.timestamp}\\033[0m"
-    }
-  }	
+	AnsiColor("xterm")
+	colorizeOutput()
+    	timestamps()
+  }
+  	
     stages {
         stage('Build') {
             steps {
