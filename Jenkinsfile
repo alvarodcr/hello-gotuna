@@ -1,13 +1,16 @@
 pipeline {
     agent any
-
+    options { 
+	timestamps()
+	ansiColor("xterm")
+	 }
     stages {
         stage('Build') {
             steps {
                 sh "docker-compose build"
             	script {
                     	def startTime = new Date().format("dd/MM/yyyy HH:mm:ss")
-                    	echo "\033[0;32mBuild finished at: ${startTime}\033[0m"
+                    	echo "\033[32mBuild finished at: ${startTime}\033[0m"
            	}
 	    }		
 	}
@@ -16,7 +19,7 @@ pipeline {
                 sh "docker-compose up -d"
 			 script {
                     def startTime = new Date().format("dd/MM/yyyy HH:mm:ss")
-                    echo "\033[0;32mUp finished at: ${startTime}\033[0m"
+                    echo "\033[32mUp finished at: ${startTime}\033[0m"
         	        }            
 
             }
