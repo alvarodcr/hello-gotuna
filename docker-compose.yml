@@ -1,8 +1,7 @@
 version: '3'
 services:
-  testgo:
+  gotuna:
     build: .
-#image es el nombre que le vamos a dar a la imagen el docker de debian lo saca del Dockerfile
-    image: testgo:slim
+    image: gotuna:0.1
     ports:
       - "8888:8888"

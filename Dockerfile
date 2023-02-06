@@ -3,7 +3,7 @@ WORKDIR /opt/gotuna
 COPY . .
 RUN go build examples/fullapp/cmd/main.go
 
-FROM debian:11.6-slim
+FROM alpine:3.14
 WORKDIR /opt/gotuna/
 COPY --from=build /opt/gotuna/main .
 EXPOSE 8888
