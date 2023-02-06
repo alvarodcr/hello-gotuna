@@ -7,7 +7,7 @@ pipeline {
                 sh "docker-compose build"
             	script {
                     	def startTime = new Date().format("dd/MM/yyyy HH:mm:ss")
-                    	echo "Build finished at: ${startTime}"
+                    	echo "\033[32mBuild finished at: ${startTime}"
            	}
 	    }		
 	}
@@ -16,7 +16,7 @@ pipeline {
                 sh "docker-compose up -d"
 			 script {
                     def startTime = new Date().format("dd/MM/yyyy HH:mm:ss")
-                    echo "Up finished at: ${startTime}"
+                    echo "\033[32mUp finished at: ${startTime}"
         	        }            
 
             }
