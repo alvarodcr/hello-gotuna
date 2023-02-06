@@ -1,10 +1,11 @@
 pipeline {
   agent any
   options { 
-	AnsiColor("xterm")
-	colorizeOutput()
-    	timestamps()
-  }
+	ansiColor("xterm")
+    	script{
+		timestamps()
+	}  
+}
   	
     stages {
         stage('Build') {
