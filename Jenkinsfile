@@ -1,7 +1,7 @@
 pipeline {
     agent any
     options { 
-	timestamps()
+	timestamps(){echo -e "\033[32m$(date)\033[0m"}
 	ansiColor("xterm")
 	 }
     stages {
