@@ -2,11 +2,10 @@ pipeline {
     agent any
     options { 
 	ansiColor("xterm")
-         
-	 timestamps {
-      echo "\\033[32m${currentBuild.timestamp}\\033[0m"
-   	 }
-	}	
+	timestamps {
+      		    echo "\\033[32m${currentBuild.timestamp}\\033[0m"
+   	}
+    }	
     stages {
         stage('Build') {
             steps {
