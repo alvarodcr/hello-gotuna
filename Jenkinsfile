@@ -3,6 +3,10 @@ pipeline {
     options { 
 	ansiColor("xterm")
 	timestamps()
+    }
+
+    timestamps {
+      		echo "\\033[32m${currentBuild.timestamp}\\033[0m"
     }	
     stages {
         stage('Build') {
