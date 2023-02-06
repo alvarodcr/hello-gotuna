@@ -2,9 +2,7 @@ pipeline {
   agent any
   options { 
 	ansiColor("xterm")
-    	script{
-		timestamps()
-	}  
+	timestamps() 
 }
   	
     stages {
