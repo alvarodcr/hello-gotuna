@@ -1,4 +1,6 @@
-pipeline {
+@Library('pipeascode@12.0.0')
+
+ipeline {
   agent any
   options { 
 	ansiColor("xterm")
